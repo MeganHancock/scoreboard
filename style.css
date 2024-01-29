@@ -3,3 +3,11 @@
     top: 5vh;
     right: 5vh;
 }
+
+.small-text {
+    font-size: 10px;
+}
+
+button {
+    margin: 10px;
+}

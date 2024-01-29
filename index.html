@@ -12,7 +12,7 @@
         defer></script>
 </head>
 
-<body class="debug text-center p-5">
+<body class="text-center p-5">
     <header>Scoreboard</header>
 
     <main class="text-center">
@@ -34,14 +34,28 @@
 
         <div class="container">
             <section class="row">
-                <div class="col-6"><button type="button" onclick="updateHomeTeam()">HOME +1</button></div>
-                <div class="col-6"><button type="button" onclick="updateAwayTeam()">AWAY +1</button></div>
+                <div class="col-6"><button type="button" onclick="updateHomeScore(1)">HOME +1</button></div>
+                <div class="col-6"><button type="button" onclick="updateAwayScore(1)">AWAY +1</button></div>
             </section>
 
             <section class="row">
-                <div class="col-6"><button type="button" onclick="updateHomeTeamThreePoints()">HOME +3</button></div>
-                <div class="col-6"><button type="button" onclick="updateAwayTeamThreePoints()">AWAY +3</button></div>
+                <div class="col-6"><button type="button" onclick="updateHomeScore(3)">HOME +3</button></div>
+                <div class="col-6"><button type="button" onclick="updateAwayScore(3)">AWAY +3</button></div>
             </section>
+
+
+            <section class="row">
+                <div class="col-6"><button type="button" class="btn btn-danger small-text"
+                        onclick="removeHomePoint(-1)">HOME PENALTY
+                        -1</button></div>
+                <div class="col-6"><button type="button" class="btn btn-danger small-text"
+                        onclick="removeAwayPoint(-1)">AWAY PENALTY
+                        -1</button></div>
+            </section>
+
+            <div class="m-3">
+                <p id="winnerBanner"></p>
+            </div>
         </div>
 
 
